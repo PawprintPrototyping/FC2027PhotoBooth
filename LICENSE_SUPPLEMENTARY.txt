@@ -23,20 +23,27 @@ Copyright (C) 2026 PAWPRINT PROTOTYPING
    non-commercial purposes, and includes the use of the Software to generate
    synthetic training data.
 
-3. No Waiver of Copyleft
+3. Prohibition on AI Assistance and Contribution
+   The Software (which term includes, without limitation, its source code,
+   object code, documentation, input prompts, output responses, logs, and any
+   modifications or derivative works thereof) shall not be contributed to, in
+   whole or in part, by any machine learning model, deep learning model, large 
+   language model, diffusion model, or any other artificial intelligence system.
+
+4. No Waiver of Copyleft
    Nothing in this Supplementary License shall be interpreted as waiving,
    limiting, or modifying any of the copyleft requirements of the GPLv3,
    including but not limited to the obligation to provide corresponding source
    code when conveying the Software in object code form.
 
-4. Automatic Termination
+5. Automatic Termination
    Any violation of Section 2 of this Supplementary License shall result in the
    immediate and automatic termination of all rights granted under BOTH this
    Supplementary License AND the GPLv3 with respect to the violating party.
    Upon termination, the violating party must cease all use and distribution
    of the Software and destroy all copies in their possession.
 
-5. Severability and Interpretation
+6. Severability and Interpretation
    If any provision of this Supplementary License is found to be unenforceable
    or in conflict with the GPLv3, such provision shall be modified only to the
    minimum extent necessary to render it enforceable and compatible with the
@@ -45,7 +52,7 @@ Copyright (C) 2026 PAWPRINT PROTOTYPING
    prohibition be strictly enforced shall be given the fullest possible effect
    consistent with applicable law.
 
-6. Disclaimer of Warranty and Limitation of Liability
+7. Disclaimer of Warranty and Limitation of Liability
    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
    FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
