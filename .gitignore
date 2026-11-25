@@ -450,3 +450,4 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
+wiggler-daemon/config.json
