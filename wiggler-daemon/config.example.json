@@ -1,0 +1,5 @@
+{
+  "timezone" : "Los Angeles",
+  "telegram_api_key": "PUT SOMETHING HERE",
+  "artifacts_location": "/home/pi"
+}

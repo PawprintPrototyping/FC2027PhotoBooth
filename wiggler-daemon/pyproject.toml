@@ -10,4 +10,6 @@ dependencies = [
     "loguru>=0.8.0",
     "pendulum>=3.3.0",
     "picamera2>=0.3.39",
+    "pillow>=13.0.0",
+    "python-telegram-bot>=22.8",
 ]

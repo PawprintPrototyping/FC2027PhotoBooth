@@ -12,6 +12,7 @@ import json
 from attr import define
 import socket
 from loguru import logger
+from config import CONFIG
 
 @define
 class Statistics:
@@ -27,15 +28,14 @@ class Statistics:
 class StatisticsController:
 
     PUBLIC_IP_ENDPOINT: str = "https://ipconfig.io"
-    STATS_TIMEZONE: str = "San Francisco"
-    DEFAULT_STATS_LOCATION: Path = Path.home() / "wiggler_statistics.json"
+    STATS_LOCATION: Path = CONFIG.artifacts_location / "wiggler_statistics.json"
 
-    def __init__(self, file_location: Path = DEFAULT_STATS_LOCATION):
+    def __init__(self, file_location: Path = STATS_LOCATION):
         self._file_location = file_location
         # Initialize the total photos count
         if not self._file_location.is_dir():
             raise FileExistsError(f"Statistics file {self._file_location} exists and is a directory, cannot continue")
-        if StatisticsController.DEFAULT_STATS_LOCATION.exists():
+        if StatisticsController.STATS_LOCATION.exists():
             try:
                 total_photos = json.loads(self._file_location.read_text())["total_photos"]
             except json.decoder.JSONDecodeError:
@@ -48,7 +48,7 @@ class StatisticsController:
             total_photos = 0
 
         self._stats = Statistics(
-            start_time=pendulum.now(tz=StatisticsController.STATS_TIMEZONE),
+            start_time=pendulum.now(tz=CONFIG.timezone),
             up_time=0,
             total_photos=total_photos,
             photos_this_session=0,
@@ -90,7 +90,7 @@ class StatisticsController:
         """
         self._stats.public_ip_address, self._stats.network_ping_rtt = await StatisticsController.get_public_ip()
         self._stats.local_ip_address = StatisticsController.get_local_ip()
-        self._stats.up_time = (pendulum.now(StatisticsController.STATS_TIMEZONE) - self._stats.start_time).as_duration()
+        self._stats.up_time = (pendulum.now(CONFIG.timezone) - self._stats.start_time).as_duration()
         await self._write_statistics()
         return self._stats
 
