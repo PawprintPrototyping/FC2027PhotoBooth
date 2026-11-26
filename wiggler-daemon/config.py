@@ -9,6 +9,7 @@ class Config:
     timezone: str
     telegram_api_key: str
     artifacts_location: Path
+    channel_id: int
 
     @staticmethod
     def from_config_file(config_file: Path) -> Config:
@@ -20,8 +21,9 @@ class Config:
         return Config(
             timezone=config_dict["timezone"],
             telegram_api_key=config_dict["telegram_bot_api_key"],
-            artifacts_location=Path(config_dict["artifacts_location"])
+            artifacts_location=Path(config_dict["artifacts_location"]),
+            channel_id=int(config_dict["channel_id"])
 
         )
 
-CONFIG = Config.from_config_file(Path("config.json"))
+CONFIG = Config.from_config_file(Path(__file__).parent.resolve()/ Path("config.json"))

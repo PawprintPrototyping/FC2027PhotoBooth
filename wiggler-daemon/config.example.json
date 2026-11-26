@@ -1,5 +1,6 @@
 {
   "timezone" : "Los Angeles",
-  "telegram_api_key": "PUT SOMETHING HERE",
-  "artifacts_location": "/home/pi"
+  "telegram_bot_api_key": "PUT SOMETHING HERE",
+  "artifacts_location": "/home/pi",
+  "channel_id": "-1"
 }
