@@ -38,7 +38,7 @@ async def create_gif(photos: typing.Tuple[Image, ...], save_location: Path) -> P
         str(save_location / filename),
         save_all=True,
         append_images=photos[1:],
-        duration=100,
+        duration=10,
         loop=0
     )
     return save_location / filename
