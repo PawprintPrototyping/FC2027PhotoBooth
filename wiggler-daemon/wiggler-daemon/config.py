@@ -1,4 +1,7 @@
 from __future__ import annotations
+
+import typing
+
 from attrs import define
 from pathlib import Path
 
@@ -10,6 +13,7 @@ class Config:
     telegram_api_key: str
     artifacts_location: Path
     channel_id: int
+    cameras: typing.Tuple[int, ...]
 
     @staticmethod
     def from_config_file(config_file: Path) -> Config:
@@ -22,7 +26,8 @@ class Config:
             timezone=config_dict["timezone"],
             telegram_api_key=config_dict["telegram_bot_api_key"],
             artifacts_location=Path(config_dict["artifacts_location"]),
-            channel_id=int(config_dict["channel_id"])
+            channel_id=int(config_dict["channel_id"]),
+            cameras=tuple([int(camera) for camera in config_dict["cameras"].split(",")])
 
         )
 

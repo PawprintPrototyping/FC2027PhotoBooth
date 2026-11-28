@@ -3,7 +3,7 @@ import typing
 from picamera2 import Picamera2
 from PIL import Image
 from loguru import logger
-from config import CONFIG
+from .config import CONFIG
 import pendulum
 
 from pathlib import Path

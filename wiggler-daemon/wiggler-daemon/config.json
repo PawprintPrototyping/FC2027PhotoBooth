@@ -1,0 +1,7 @@
+{
+  "timezone" : "America/Los_Angeles",
+  "telegram_bot_api_key": "9119773177:AAEQ95H9Ek382X2wMILtUfmEF90pJPUiby4",
+  "artifacts_location": "/home/pi",
+  "channel_id": "-1005756370370",
+  "cameras": "0,1"
+}

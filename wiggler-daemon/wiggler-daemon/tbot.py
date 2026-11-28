@@ -15,13 +15,12 @@ Press Ctrl-C on the command line or send a signal to the process to stop the
 bot.
 """
 import telegram
-from config import CONFIG
 from pathlib import Path
 
 from loguru import logger
 from telegram import ForceReply, Update
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
-from config import CONFIG
+from .config import CONFIG
 
 MAX_PHOTO_SIZE = (2**20)*10
 MAX_VIDEO_SIZE = (2**20)*50
